@@ -26,7 +26,7 @@ public class Start extends JFrame {
     	this.start = this;
     	ImageIcon icon = new ImageIcon("images/Main.png");
     	Toolkit t = Toolkit.getDefaultToolkit();
-    	this.img = t.getImage("images/i15395282170.gif");
+    	this.img = t.getImage("images/GIF.gif");
     	this.setSize(960, 720);
     	
     
