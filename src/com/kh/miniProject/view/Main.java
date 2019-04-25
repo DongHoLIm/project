@@ -3,6 +3,7 @@ package com.kh.miniProject.view;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -49,12 +50,28 @@ public class Main extends JPanel{
 		JTextArea textArea = new JTextArea(10,30);
 		textArea.setLocation(200,300);
 		textArea.setSize(300,100);
-		textArea.setText("\n\n ¾Æ ¿¬¾ÖÇÏ°í½Í´Ù~");
+		textArea.setText("\n\n ì•„ ì—°ì• í•˜ê³ ì‹¶ë‹¤~");
 		textArea.setEditable(false);
 		
+		//ìƒë‹¨ ë‚ ì§œ ì¶”ê°€
+		Calendar c = Calendar.getInstance();
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH )+1;
+		int date = c.get(Calendar.DATE);
+		String days = year + "ë…„" + month + "ì›”" + date + "ì¼";
+		JLabel day = new JLabel(days);
+		day.setBounds(400, 20, 400, 10);
+		this.add(day);
+		
+		
 		info.addActionListener(new Change());
+
 		//aff.addActionListener(new PlusLove());
 		coin.addActionListener(new Change2());
+
+		aff.addActionListener(new Change1());
+		//coin.addActionListener(new PlusCoin());
+
 		
 		this.add(map);
 		this.add(textArea);
@@ -109,6 +126,7 @@ public class Main extends JPanel{
 
 		
 	}
+
 	class Change2 implements ActionListener{
 
 		@Override
@@ -119,5 +137,17 @@ public class Main extends JPanel{
 
 	}
 	
+
+	
+	
+	class Change1 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, main, new MyLovePercent(start));
+		}
+
+	}
+
 
 }

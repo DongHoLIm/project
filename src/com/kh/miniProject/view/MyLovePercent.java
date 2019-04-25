@@ -8,22 +8,29 @@ import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
 public class MyLovePercent extends JPanel{
-	private JPanel main;
+	private JFrame start;
 	private JPanel love;
+	private JPanel loveIn;
 
-	public MyLovePercent(JPanel main) {
-		this.main = main;
+	public MyLovePercent(JFrame start) {
+		this.start = start;
 		this.love = this;
+		
+		loveIn = new JPanel();
+		loveIn.setLocation(100,50);
+		loveIn.setSize(400,500);
+		loveIn.setLayout(null);
+		loveIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
 
-		this.setLocation(100,100);
-		this.setSize(400,500);
+		this.setLocation(0,0);
+		this.setSize(960,720);
 		this.setLayout(null);
-		this.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
 
 		JLabel label0 = new JLabel("나의 애정도 입니다!!");
 		label0.setSize(300,50);
@@ -58,29 +65,48 @@ public class MyLovePercent extends JPanel{
 		label5.setLocation(10,300);
 		label5.setSize(50, 50);
 		
-		exit.addActionListener(new Delete());
-
-		this.add(label0);
-		this.add(exit);
-		this.add(label1);
-		this.add(label2);
-		this.add(label3);
-		this.add(label4);
-		this.add(label5);
+		JButton info = new JButton("Info");
+		info.setLocation(50,50);
+		info.setSize(30,30);
+		JButton shop = new JButton("shop");
+		shop.setLocation(50,90);
+		shop.setSize(30,30);
+		JButton aff = new JButton("aff");
+		aff.setLocation(50,130);
+		aff.setSize(30,30);
+		JButton coin = new JButton("coin");
+		coin.setLocation(600,50);
+		coin.setSize(30,30);
+		JButton map = new JButton("map");
+		map.setLocation(850,50);
+		map.setSize(30,30);
 		
-		main.add(this);
-		main.repaint();
+		exit.addActionListener(new Change());
+		
+		loveIn.add(label0);
+		loveIn.add(exit);
+		loveIn.add(label1);
+		loveIn.add(label2);
+		loveIn.add(label3);
+		loveIn.add(label4);
+		loveIn.add(label5);
+
+		this.add(loveIn);
+		this.add(info);
+		this.add(shop);
+		this.add(aff);
+		this.add(coin);
+		this.add(map);
 		
 		
 
 	}
 	
-	class Delete implements ActionListener{
-
+class Change implements ActionListener{
+		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			DeletePanel.DeletePanel(main, love);
-			
+			ChangePanel.ChangePanel(start, love, new Main(start));
 		}
 		
 	}
