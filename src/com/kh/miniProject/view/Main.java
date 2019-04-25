@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.kh.miniProject.view.Main.Change2;
+
 public class Main extends JPanel{
 	private JFrame start;
 	private JPanel main;
@@ -48,23 +50,28 @@ public class Main extends JPanel{
 		JTextArea textArea = new JTextArea(10,30);
 		textArea.setLocation(200,300);
 		textArea.setSize(300,100);
-		textArea.setText("\n\n ¾Æ ¿¬¾ÖÇÏ°í½Í´Ù~");
+		textArea.setText("\n\n ì•„ ì—°ì• í•˜ê³ ì‹¶ë‹¤~");
 		textArea.setEditable(false);
 		
-		//»ó´Ü ³¯Â¥ Ãß°¡
+		//ìƒë‹¨ ë‚ ì§œ ì¶”ê°€
 		Calendar c = Calendar.getInstance();
 		int year = c.get(Calendar.YEAR);
 		int month = c.get(Calendar.MONTH )+1;
 		int date = c.get(Calendar.DATE);
-		String days = year + "³â" + month + "¿ù" + date + "ÀÏ";
+		String days = year + "ë…„" + month + "ì›”" + date + "ì¼";
 		JLabel day = new JLabel(days);
 		day.setBounds(400, 20, 400, 10);
 		this.add(day);
 		
 		
 		info.addActionListener(new Change());
+
+		//aff.addActionListener(new PlusLove());
+		coin.addActionListener(new Change2());
+
 		aff.addActionListener(new Change1());
 		//coin.addActionListener(new PlusCoin());
+
 		
 		this.add(map);
 		this.add(textArea);
@@ -119,6 +126,18 @@ public class Main extends JPanel{
 
 		
 	}
+
+	class Change2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e1) {
+			ChangePanel.ChangePanel(start, main, new CoinShop(start));
+			
+		}
+
+	}
+	
+
 	
 	
 	class Change1 implements ActionListener{
