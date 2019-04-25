@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.kh.miniProject.view.Main.Change2;
+
 public class Main extends JPanel{
 	private JFrame start;
 	private JPanel main;
@@ -52,7 +54,7 @@ public class Main extends JPanel{
 		
 		info.addActionListener(new Change());
 		//aff.addActionListener(new PlusLove());
-		//coin.addActionListener(new PlusCoin());
+		coin.addActionListener(new Change2());
 		
 		this.add(map);
 		this.add(textArea);
@@ -107,5 +109,15 @@ public class Main extends JPanel{
 
 		
 	}
+	class Change2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e1) {
+			ChangePanel.ChangePanel(start, main, new CoinShop(start));
+			
+		}
+
+	}
+	
 
 }
