@@ -2,6 +2,6 @@ package com.kh.miniProject.view;
 
 public class dsfds {
 public static void main(String[] args) {
-	System.out.println("시발 gif");
+	System.out.println("시발");
 }
 }
