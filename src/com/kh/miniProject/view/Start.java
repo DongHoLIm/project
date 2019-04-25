@@ -46,8 +46,8 @@ public class Start extends JFrame {
        
        
        JButton button = new JButton(new ImageIcon("images/START.png"));
-        button.setLocation(430,435);
-        button.setSize(100,40);
+        button.setLocation(420,430);
+        button.setSize(120,40);
         button.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseExited(MouseEvent arg0) {
