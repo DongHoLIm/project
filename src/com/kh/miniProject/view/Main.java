@@ -3,6 +3,7 @@ package com.kh.miniProject.view;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -50,8 +51,19 @@ public class Main extends JPanel{
 		textArea.setText("\n\n 아 연애하고싶다~");
 		textArea.setEditable(false);
 		
+		//상단 날짜 추가
+		Calendar c = Calendar.getInstance();
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH )+1;
+		int date = c.get(Calendar.DATE);
+		String days = year + "년" + month + "월" + date + "일";
+		JLabel day = new JLabel(days);
+		day.setBounds(400, 20, 400, 10);
+		this.add(day);
+		
+		
 		info.addActionListener(new Change());
-		//aff.addActionListener(new PlusLove());
+		aff.addActionListener(new Change1());
 		//coin.addActionListener(new PlusCoin());
 		
 		this.add(map);
@@ -107,5 +119,16 @@ public class Main extends JPanel{
 
 		
 	}
+	
+	
+	class Change1 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, main, new MyLovePercent(start));
+		}
+
+	}
+
 
 }
