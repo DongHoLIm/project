@@ -38,6 +38,7 @@ public class Main extends JPanel{
 		JButton shop = new JButton("shop");
 		shop.setLocation(50,90);
 		shop.setSize(30,30);
+		shop.addActionListener(new Change5()); 
 		JButton aff = new JButton("aff");
 		aff.setLocation(50,130);
 		aff.setSize(30,30);
@@ -50,15 +51,15 @@ public class Main extends JPanel{
 		JTextArea textArea = new JTextArea(10,30);
 		textArea.setLocation(200,300);
 		textArea.setSize(300,100);
-		textArea.setText("\n\n 아 연애하고싶다~");
+		textArea.setText("\n\n �븘 �뿰�븷�븯怨좎떢�떎~");
 		textArea.setEditable(false);
 		
-		//상단 날짜 추가
+		//�긽�떒 �궇吏� 異붽�
 		Calendar c = Calendar.getInstance();
 		int year = c.get(Calendar.YEAR);
 		int month = c.get(Calendar.MONTH )+1;
 		int date = c.get(Calendar.DATE);
-		String days = year + "년" + month + "월" + date + "일";
+		String days = year + "�뀈" + month + "�썡" + date + "�씪";
 		JLabel day = new JLabel(days);
 		day.setBounds(400, 20, 400, 10);
 		this.add(day);
@@ -147,6 +148,15 @@ public class Main extends JPanel{
 			ChangePanel.ChangePanel(start, main, new MyLovePercent(start));
 		}
 
+	}
+	class Change5 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, main, new StoreMain(start));
+			
+		}
+		
 	}
 
 
