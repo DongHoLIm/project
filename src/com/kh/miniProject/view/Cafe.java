@@ -8,6 +8,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.vo.Day;
+
 
 public class Cafe extends JPanel {
 	private JFrame start;
@@ -52,6 +54,7 @@ public class Cafe extends JPanel {
 			Main.day2++;
 			Main.day++;
 			Main.dayBreak++;
+			new Day().day();
 			ChangePanel.ChangePanel(start, cafe, new Main(start));
 		}
 

@@ -13,28 +13,19 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import com.kh.miniProject.model.vo.Day;
+
 public class Main extends JPanel{
 	private JFrame start;
 	private JPanel main;
-	static int day = 0;
-    static int dayBreak =0;
-    static int totalDay =1;
-    static int day2 = 0;
+	public static String str = "아침";
+	public static int day = 0;
+	public static int dayBreak =0;
+    public static int totalDay =1;
+    public static int day2 = 0;
   //  static int totalDay2 = 1;
-
+   
 	public Main(JFrame start) {
-		String str = "아침";
-		 if(day2 == 0) {
-			str = "아침";
-		}else if(day2 == 1) {
-			str = "점심";
-		}else if(day2 == 2) {
-			str = "저녁";
-		}else if(day2 ==3) {
-			//totalDay2 +=1;
-			totalDay +=1;
-			day2 = 0;
-		}
 	
 		this.start = start;
 		this.main = this;

@@ -14,6 +14,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.vo.Day;
+
 
 public class Park extends JPanel {
 	private JFrame start;
@@ -56,6 +58,7 @@ public class Park extends JPanel {
 			Main.day2++;
 			Main.day++;
 			Main.dayBreak++;
+			new Day().day();
 			ChangePanel.ChangePanel(start, park, new Main(start));
 		}
 		
