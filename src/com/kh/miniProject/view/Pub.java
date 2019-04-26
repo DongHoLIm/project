@@ -45,6 +45,7 @@ public class Pub extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			Main.day2++;
 			Main.day++;
 			Main.dayBreak++;
 			ChangePanel.ChangePanel(start, rub, new Main(start));

@@ -19,17 +19,21 @@ public class Main extends JPanel{
 	static int day = 0;
     static int dayBreak =0;
     static int totalDay =1;
+    static int day2 = 0;
+  //  static int totalDay2 = 1;
 
 	public Main(JFrame start) {
 		String str = "아침";
-		 if(day == 0) {
+		 if(day2 == 0) {
 			str = "아침";
-		}else if(day == 1) {
+		}else if(day2 == 1) {
 			str = "점심";
-		}else if(day == 2) {
+		}else if(day2 == 2) {
 			str = "저녁";
-		}else if(day ==3) {
+		}else if(day2 ==3) {
+			//totalDay2 +=1;
 			totalDay +=1;
+			day2 = 0;
 		}
 	
 		this.start = start;
@@ -81,7 +85,7 @@ public class Main extends JPanel{
 		Calendar c = Calendar.getInstance();
 		int year = c.get(Calendar.YEAR);
 		int month = c.get(Calendar.MONTH )+1;
-		int date = c.get(Calendar.DATE)+totalDay;
+		int date = c.get(Calendar.DATE)+totalDay-1;
 		String days = year + "년" + month + "월" + date + "일";
 		JLabel day = new JLabel(days);
 		day.setBounds(400, 20, 400, 20);
