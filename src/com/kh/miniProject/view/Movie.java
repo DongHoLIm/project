@@ -15,6 +15,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.vo.Day;
+
 public class Movie extends JPanel {
 	private JFrame start;
 	
@@ -82,6 +84,7 @@ public class Movie extends JPanel {
 			Main.day2++;
 			Main.day++;
 			Main.dayBreak++;
+			new Day().day();
 			ChangePanel.ChangePanel(start, movie, new Main(start));
 		}
 		

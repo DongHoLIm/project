@@ -8,9 +8,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.vo.Day;
+
 
 
 public class Beach extends JPanel {
+	
 	private JFrame start;
 
 	private JPanel beach;
@@ -53,6 +56,7 @@ public class Beach extends JPanel {
 			Main.day2++;
 			Main.day++;
 			Main.dayBreak++;
+			new Day().day();
 			ChangePanel.ChangePanel(start, beach, new Main(start));
 		}
 

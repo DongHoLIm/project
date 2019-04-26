@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.model.vo.Day;
 import com.kh.miniProject.view.Movie.ChangeMain;
 
 public class SingingRoom extends JPanel {
@@ -54,6 +55,7 @@ public class SingingRoom extends JPanel {
 			Main.day2++;
 			Main.day++;
 			Main.dayBreak++;
+			new Day().day();
 			ChangePanel.ChangePanel(start, singingRoom, new Main(start));
 		}
 
