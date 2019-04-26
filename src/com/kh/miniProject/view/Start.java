@@ -34,7 +34,7 @@ public class Start extends JFrame {
         //배경 Panel 생성후 컨텐츠페인으로 지정      
     	startmain = new JPanel() {
             public void paintComponent(Graphics g) {
-            	g.drawImage(img,0,0,960,720,this);
+            	g.drawImage(img,0,0,960,730,this);
                 g.drawImage(icon.getImage(), 0, 0,960,720, null);
                 setOpaque(false); 
                 super.paintComponent(g);
@@ -46,8 +46,8 @@ public class Start extends JFrame {
        
        
        JButton button = new JButton(new ImageIcon("images/START.png"));
-        button.setLocation(430,435);
-        button.setSize(100,40);
+        button.setLocation(420,430);
+        button.setSize(120,40);
         button.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseExited(MouseEvent arg0) {
@@ -145,6 +145,7 @@ public class Start extends JFrame {
         
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
+        this.setResizable(false);
     }
  
     

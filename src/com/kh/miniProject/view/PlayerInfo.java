@@ -2,6 +2,8 @@ package com.kh.miniProject.view;
 
 import java.awt.Color;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -68,15 +70,15 @@ public class PlayerInfo extends JPanel{
 		exper.setLocation(100,150);
 		exper.setSize(50,20);
 		
+		exit.addActionListener(new Change());
+		cloth.addActionListener(new Change2());
+		
 		playerInfoIn.add(label);
 		playerInfoIn.add(exit);
 		playerInfoIn.add(cloth);
 		playerInfoIn.add(level);
 		playerInfoIn.add(charm);
 		playerInfoIn.add(exper); 
-		
-//		cloth.addActionListener(new Change());
-//		exit.addActionListener(new Delete());
 		
 		this.add(map);
 		this.add(info);
@@ -90,25 +92,25 @@ public class PlayerInfo extends JPanel{
 //		main.repaint();
 	}
 	
-//	class Change implements ActionListener{
-//
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			ChangePanel.ChangePanel(main, pinfo, new ClothRoom(main));			
-//		}
-//
-//		
-//	}
-//	
-//	class Delete implements ActionListener{
-//
-//		@Override
-//		public void actionPerformed(ActionEvent e) {
-//			DeletePanel.DeletePanel(main, pinfo);
-//			
-//		}
-//		
-//	}
+	class Change implements ActionListener{
+
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, pinfo, new Main(start));			
+		}
+
+		
+	}
+	
+	class Change2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			ChangePanel.ChangePanel(start, pinfo, new ClothRoom(start));
+			
+		}
+		
+	}
 
 }

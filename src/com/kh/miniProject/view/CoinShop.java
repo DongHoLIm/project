@@ -6,21 +6,49 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.view.CoinShop.Change;
+import com.kh.miniProject.view.CoinShop.Change2;
+
 public class CoinShop extends JPanel{
-	private JPanel main;
+	private JFrame start;
 	private JPanel coin;
+	private JPanel coinIn;
 	
-	public CoinShop(JPanel main) {
-		this.main = main;
+	public CoinShop(JFrame start) {
+		this.start = start;
 		this.coin = this;
 		
-		this.setLocation(300,80);
-		this.setSize(500,400);
-		this.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
-
+		
+		this.setLocation(0,0);
+		this.setSize(960,720);
+		this.setLayout(null);
+		
+		coinIn=new JPanel();
+		coinIn.setLayout(null);
+		coinIn.setLocation(400, 80);
+		coinIn.setSize(500,400);
+		coinIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
+		
+		JButton info = new JButton("Info");
+		info.setLocation(50,50);
+		info.setSize(30,30);
+		JButton shop = new JButton("shop");
+		shop.setLocation(50,90);
+		shop.setSize(30,30);
+		JButton aff = new JButton("aff");
+		aff.setLocation(50,130);
+		aff.setSize(30,30);
+		JButton coin = new JButton("coin");
+		coin.setLocation(600,50);
+		coin.setSize(30,30);
+		JButton map = new JButton("map");
+		map.setLocation(850,50);
+		map.setSize(30,30);
+		
 	    JLabel coinShop= new JLabel("\ncoinShop");
 	    coinShop.setLocation(210,50);
 	    coinShop.setSize(120,50);
@@ -29,38 +57,45 @@ public class CoinShop extends JPanel{
 	    exit.setLocation(450,25);
 	    exit.setSize(30,30);
 
-	    JButton btn1=new JButton("$500"); 
+	    JButton btn1=new JButton("500"); 
 	    btn1.setLocation(50,280);
 	    btn1.setSize(75,30);
 
-	    JButton btn2=new JButton("$1000"); 
+	    JButton btn2=new JButton("1000"); 
 	    btn2.setLocation(150,280);
 	    btn2.setSize(75,30);
 
-	    JButton btn3=new JButton("$1500"); 
+	    JButton btn3=new JButton("1500"); 
 	    btn3.setLocation(250,280);
 	    btn3.setSize(75,30);
 
-	    JButton btn4=new JButton("$2000"); 
+	    JButton btn4=new JButton("2000"); 
 	    btn4.setLocation(350,280);
 	    btn4.setSize(75,30);
 	    
-	    exit.addActionListener(new Delete());
-//	    btn1.addActionListener(new Change());
-//	    btn2.addActionListener(new Change());
-//	    btn3.addActionListener(new Change());
-//	    btn4.addActionListener(new Change());
+	    exit.addActionListener(new Change());
+	    btn1.addActionListener(new Change2());
+	    btn2.addActionListener(new Change2());
+	    btn3.addActionListener(new Change2());
+	    btn4.addActionListener(new Change2());
 	    
 	    
-	    this.add(coinShop);
-	    this.add(exit);
-	    this.add(btn1);
-	    this.add(btn2);
-	    this.add(btn3);
-	    this.add(btn4);
+	    coinIn.add(coinShop);
+	    coinIn.add(exit);
+	    coinIn.add(btn1);
+	    coinIn.add(btn2);
+	    coinIn.add(btn3);
+	    coinIn.add(btn4);
 	    
-	    main.add(this);
-	    main.repaint();
+	    this.add(map);
+		this.add(info);
+		this.add(coin);
+		this.add(shop);
+		this.add(aff);
+	    this.add(coinIn);
+	    
+//	    main.add(this);
+//	    main.repaint();
 	}
 	
 //	class Change implements ActionListener{
@@ -74,11 +109,33 @@ public class CoinShop extends JPanel{
 //		
 //	}
 	
-	class Delete implements ActionListener{
+//	class Delete implements ActionListener{
+//
+//		@Override
+//		public void actionPerformed(ActionEvent e) {
+//			DeletePanel.DeletePanel(main, coin);
+//			
+////		}
+//	
+//			
+//		}
+	
+	class Change implements ActionListener{
+
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			DeletePanel.DeletePanel(main, coin);
+			ChangePanel.ChangePanel(start, coin, new Main(start));			
+		}
+
+		
+	}
+	
+	class Change2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			ChangePanel.ChangePanel(start, coin, new PlusCoin(start));
 			
 		}
 		
