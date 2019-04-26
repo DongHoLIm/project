@@ -17,6 +17,8 @@ public class PlayerInfo extends JPanel{
 	private JFrame start;
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
+	private int lev = 1;
+	private JLabel levelIn;
 
 	public PlayerInfo(JFrame start) {
 		this.start = start;
@@ -61,7 +63,7 @@ public class PlayerInfo extends JPanel{
 		cloth.setLocation(310, 420);
 		cloth.setSize(70,30);
 		JLabel level = new JLabel("Level : ");
-		level.setLocation(140,180);
+		level.setLocation(180,180);
 		level.setSize(100,30);
 		JLabel charm = new JLabel("매력도 : ");
 		charm.setLocation(100,130);
@@ -69,6 +71,9 @@ public class PlayerInfo extends JPanel{
 		JLabel exper = new JLabel("경험치 : ");
 		exper.setLocation(100,150);
 		exper.setSize(50,20);
+		String strlev = String.valueOf(lev).toString();
+		levelIn = new JLabel(strlev);
+		levelIn.setBounds(210,145,100,100);
 		
 		exit.addActionListener(new Change());
 		cloth.addActionListener(new Change2());
@@ -79,6 +84,7 @@ public class PlayerInfo extends JPanel{
 		playerInfoIn.add(level);
 		playerInfoIn.add(charm);
 		playerInfoIn.add(exper); 
+		playerInfoIn.add(levelIn);
 		
 		this.add(map);
 		this.add(info);

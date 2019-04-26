@@ -1,6 +1,9 @@
 package com.kh.miniProject.model.vo;
 
 public class RandomPlace {
+
+
+
 	public static int random2[] = new int [5];
 	public RandomPlace() {
 			System.out.println("test"); 
@@ -27,4 +30,5 @@ public class RandomPlace {
 	public void setRandom2(int[] random2) {
 		this.random2 = random2;
 	}
+
 }
