@@ -37,6 +37,44 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		clothItems.add(iteminfo);
+		citem1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+				
+				
+			}
+		});
 		
 		JButton citem2 = new JButton("item2");
 		citem2.setSize(120,120);
@@ -46,6 +84,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		clothItems.add(iteminfo);
+		citem2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton citem3 = new JButton("item3");
 		citem3.setSize(120,120);
@@ -55,6 +129,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		clothItems.add(iteminfo);
+		citem3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton citem4 = new JButton("item4");
 		citem4.setSize(120,120);
@@ -64,6 +174,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		clothItems.add(iteminfo);
+		citem4.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JPanel shoesItems = new JPanel();
 		shoesItems.setLayout(null);
@@ -76,6 +222,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		shoesItems.add(iteminfo);
+		sitem1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton sitem2 = new JButton("item6");
 		sitem2.setSize(120,120);
@@ -85,6 +267,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		shoesItems.add(iteminfo);
+		sitem2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton sitem3 = new JButton("item7");
 		sitem3.setSize(120,120);
@@ -94,6 +312,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		shoesItems.add(iteminfo);
+		sitem3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton sitem4 = new JButton("item8");
 		sitem4.setSize(120,120);
@@ -103,6 +357,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		shoesItems.add(iteminfo);
+		sitem4.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JPanel jewerlyItems = new JPanel();
 		jewerlyItems.setLayout(null);
@@ -115,6 +405,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		jewerlyItems.add(iteminfo);
+		jitem1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton jitem2 = new JButton("item10");
 		jitem2.setSize(120,120);
@@ -124,6 +450,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		jewerlyItems.add(iteminfo);
+		jitem2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton jitem3 = new JButton("item11");
 		jitem3.setSize(120,120);
@@ -133,6 +495,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		jewerlyItems.add(iteminfo);
+		jitem3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton jitem4 = new JButton("item12");
 		jitem4.setSize(120,120);
@@ -142,6 +540,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		jewerlyItems.add(iteminfo);
+		jitem4.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JPanel item = new JPanel();
 		item.setLayout(null);
@@ -154,6 +588,43 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 20);
 		item.add(iteminfo);
+		item1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
+		
 		
 		JButton item2 = new JButton("item14");
 		item2.setSize(120,120);
@@ -163,6 +634,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(160, 160);
 		item.add(iteminfo);
+		item2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton item3 = new JButton("item15");
 		item3.setSize(120,120);
@@ -172,6 +679,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 20);
 		item.add(iteminfo);
+		item3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JButton item4 = new JButton("item16");
 		item4.setSize(120,120);
@@ -181,6 +724,42 @@ public class StoreMain extends JPanel {
 		iteminfo.setSize(120,120);
 		iteminfo.setLocation(520, 160);
 		item.add(iteminfo);
+		item4.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel check = new JPanel();
+				check.setSize(920,720);
+				check.setLayout(null);
+				ChangePanel.ChangePanel(start, shopmain, check);
+				JButton yes = new JButton("yes");
+				yes.setSize(300,150);
+				yes.setLocation(110,310);
+				yes.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				JButton no  = new JButton("no");
+				no.setSize(300,150);
+				no.setLocation(510,310);
+				no.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						ChangePanel.ChangePanel(start, check,shopmain );
+						
+					}
+				});
+				
+				check.add(yes);
+				check.add(no);
+				
+			}
+		});
 		
 		JLabel coin = new JLabel("coin");
 		coin.setSize(240,30);
