@@ -18,5 +18,13 @@ public class ChangePanel {
 		a.add(c);
 		a.repaint();
 	}
+	
+	public static void imageChange(JPanel a, JPanel b, JPanel c, JPanel d, JPanel e) {
+		a.remove(c);
+		a.remove(d);
+		a.remove(e);
+		a.add(b);
+		a.repaint();
+	}
 
 }

@@ -17,6 +17,11 @@ public class StoreMain extends JPanel {
 	private JFrame start;
 	private JPanel shopmain;
 	private JLabel iteminfo;
+	private JLabel ClothRoom;
+	ClothPanel cp = new ClothPanel();
+	ShoesPanel sp = new ShoesPanel();
+	AccPanel ap = new AccPanel();
+	ItemPanel ip = new ItemPanel();
 	
 	public StoreMain(JFrame start) {
 		this.start = start;
@@ -53,6 +58,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						cp.test(1);
 						
 					}
 				});
@@ -100,6 +106,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						cp.test(2);
 						
 					}
 				});
@@ -145,6 +152,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						cp.test(3);
 						
 					}
 				});
@@ -190,6 +198,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						cp.test(4);
 						
 					}
 				});
@@ -238,6 +247,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						sp.test(5);
 						
 					}
 				});
@@ -283,6 +293,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						sp.test(6);
 						
 					}
 				});
@@ -328,6 +339,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						sp.test(7);
 						
 					}
 				});
@@ -373,6 +385,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						sp.test(8);
 						
 					}
 				});
