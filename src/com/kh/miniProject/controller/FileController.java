@@ -2,6 +2,8 @@ package com.kh.miniProject.controller;
 
 import java.awt.Image;
 
+import com.kh.miniProject.model.dao.ImageOutput;
+
 public class FileController {
 	
 	public Image goRandomImageOutput() {
@@ -9,9 +11,9 @@ public class FileController {
 		return null;
 	}
 	
-	public Image goImageOutput() {
+	public Image goImageOutput(int i) {
 		
-		return null;
+		return new ImageOutput().imageOutput(i);
 	}
 	
 	public String goRandomTextOutput() {
