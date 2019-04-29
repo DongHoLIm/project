@@ -36,6 +36,19 @@ public class Main extends JPanel{
 
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;
 
+		
+		String startMent = null;
+		int mentRan = (int)(Math.random()*5)+1;
+		
+		switch(mentRan) {
+		case 1 : startMent = "\n\n 아 연애 하고싶다~"; break;
+		case 2 : startMent = "\n\n 오늘은 어떤 여자를 만날까~?"; break;
+		case 3 : startMent = "\n\n 오늘은 누구와 데이트 해볼까~?"; break;
+		case 4 : startMent = "\n\n 모쏠 탈출 가즈아~~"; break;
+		case 5 : startMent = "\n\n 아 여자친구 사귀고 싶다~"; break;
+			
+		}
+		
 		JLabel label = new JLabel();
 		label.setIcon(new ImageIcon(icon));
 		label.setLocation(250,210);
@@ -60,7 +73,7 @@ public class Main extends JPanel{
 		JTextArea textArea = new JTextArea(10,30);
 		textArea.setLocation(200,300);
 		textArea.setSize(300,100);
-		textArea.setText("\n\n 아 연애 하고싶다~");
+		textArea.setText(startMent);
 		textArea.setEditable(false);
 		JLabel textlabel = new JLabel();
 		textlabel.setText(str);
@@ -71,16 +84,16 @@ public class Main extends JPanel{
 		textlabel2.setSize(50,20);
 		textlabel2.setText(totalDay + "일차");
 		
-		
-		//�긽�떒 �궇吏� 異붽�
+	
 		Calendar c = Calendar.getInstance();
 		int year = c.get(Calendar.YEAR);
 		int month = c.get(Calendar.MONTH )+1;
 		int date = c.get(Calendar.DATE)+totalDay-1;
 		String days = year + "년" + month + "월" + date + "일";
-		JLabel day = new JLabel(days);
-		day.setBounds(400, 20, 400, 20);
-		this.add(day);
+		JLabel dayday = new JLabel(days);
+		dayday.setBounds(400, 20, 400, 20);
+		this.add(dayday);
+		
 		
 		
 		info.addActionListener(new Change());
