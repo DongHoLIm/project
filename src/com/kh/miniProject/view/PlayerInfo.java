@@ -17,12 +17,12 @@ public class PlayerInfo extends JPanel{
 	private JFrame start;
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
-	private int lev = 1;
+	private static int lev = 1;
 	private JLabel levelIn;
 
 	public PlayerInfo(JFrame start) {
 		this.start = start;
-		this.pinfo = this;
+		this.pinfo = this;    
 		
 		this.setLocation(0,0);
 		this.setSize(960,720);
