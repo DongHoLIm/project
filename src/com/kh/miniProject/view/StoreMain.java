@@ -2,15 +2,14 @@ package com.kh.miniProject.view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
+
+import com.kh.miniProject.model.vo.PointMinus;
 
 
 public class StoreMain extends JPanel {
@@ -22,6 +21,7 @@ public class StoreMain extends JPanel {
 	ShoesPanel sp = new ShoesPanel();
 	AccPanel ap = new AccPanel();
 	ItemPanel ip = new ItemPanel();
+	PointMinus pm = new PointMinus();
 	
 	public StoreMain(JFrame start) {
 		this.start = start;
@@ -59,6 +59,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(1);
+						pm.pointMinus(100);
 						
 					}
 				});
@@ -107,6 +108,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(2);
+						pm.pointMinus(200);
 						
 					}
 				});
@@ -153,6 +155,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(3);
+						pm.pointMinus(300);
 						
 					}
 				});
@@ -199,6 +202,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						cp.test(4);
+						pm.pointMinus(400);
 						
 					}
 				});
@@ -248,6 +252,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(5);
+						pm.pointMinus(500);
 						
 					}
 				});
@@ -294,6 +299,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(6);
+						pm.pointMinus(600);
 						
 					}
 				});
@@ -340,6 +346,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(7);
+						pm.pointMinus(700);
 						
 					}
 				});
@@ -386,6 +393,7 @@ public class StoreMain extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
 						sp.test(8);
+						pm.pointMinus(800);
 						
 					}
 				});
@@ -434,6 +442,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						pm.pointMinus(900);
 						
 					}
 				});
@@ -479,7 +488,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
-						
+						pm.pointMinus(1000);
 					}
 				});
 				JButton no  = new JButton("no");
@@ -524,6 +533,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						pm.pointMinus(1100);
 						
 					}
 				});
@@ -569,6 +579,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						pm.pointMinus(1200);
 						
 					}
 				});
@@ -617,6 +628,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						pm.pointMinus(1300);
 						
 					}
 				});
@@ -663,6 +675,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						pm.pointMinus(1400);
 						
 					}
 				});
@@ -708,6 +721,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						pm.pointMinus(1500);
 						
 					}
 				});
@@ -753,6 +767,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						pm.pointMinus(1600);
 						
 					}
 				});

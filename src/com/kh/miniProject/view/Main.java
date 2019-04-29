@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import com.kh.miniProject.model.vo.Day;
+import com.kh.miniProject.model.vo.PointMinus;
 
 public class Main extends JPanel{
 	private JFrame start;
@@ -83,6 +83,15 @@ public class Main extends JPanel{
 		textlabel2.setLocation(310,20);
 		textlabel2.setSize(50,20);
 		textlabel2.setText(totalDay + "일차");
+		JLabel textLabel2 = new JLabel();
+		String coinstr = Integer.valueOf(PointMinus.resultcoin).toString();
+		textLabel2.setLocation(650,40);
+		textLabel2.setSize(100,50);
+		if(!coinstr.equals(0)) {
+			textLabel2.setText(coinstr);			
+		}else {
+			textLabel2.setText("0");	
+		}
 		
 	
 		Calendar c = Calendar.getInstance();
@@ -109,6 +118,7 @@ public class Main extends JPanel{
 		this.add(textArea);
 		this.add(textlabel);
 		this.add(textlabel2);
+		this.add(textLabel2);
 		this.add(label);
 		this.add(info);
 		this.add(shop);
