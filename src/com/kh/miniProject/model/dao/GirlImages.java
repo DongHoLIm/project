@@ -38,6 +38,7 @@ public class GirlImages extends JPanel{
 		}else if(lev == 3) {
 			for(int i = 0; i < result.length; i++) {
 				result[i] = girlImage[i];
+				System.out.println("값 들어가?응?");
 			}
 			return result;
 		}else if(lev == 4) {
