@@ -194,9 +194,9 @@ public class Main extends JPanel{
 					}
 					
 				}else if(totalDay == 11) {
-					System.out.println("10일째 지남 게임끝 엔딩");
+					ChangePanel.ChangePanel(start, main, new Ending(start));
 				}
-				if(dayBreak == 0 && totalDay != 11 ) {
+				else if(dayBreak == 0 && totalDay != 11 ) {
 					dayBreak = 1;
 					ChangePanel.ChangePanel(start, main, new MiniMap(start));
 				}else if(dayBreak == 3 && day == 1 && totalDay != 11) {

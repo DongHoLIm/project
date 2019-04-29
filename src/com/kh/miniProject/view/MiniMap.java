@@ -20,10 +20,10 @@ public class MiniMap extends JPanel {
 	private JPanel MiniMap;
 	private JPanel main;
 	private Map hmap;
-	static int te[] = new int[5];
-	static int temp[] = new int[5];
-	static int temp2[] = new int[5];
-	static int temp3[] = new int[5];
+	public static int te[] = new int[5];
+	public static int temp[] = new int[5];
+	public static int temp2[] = new int[5];
+	public static int temp3[] = new int[5];
 	RandomPlace rp = new RandomPlace();
 
 	// ImageIcon background;

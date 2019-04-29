@@ -17,7 +17,16 @@ public class PlayerInfo extends JPanel{
 	private JFrame start;
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
-	private int lev = 1;
+	private static int lev = 1;
+	private static int levBreak = 0;
+	public static int getLevBreak() {
+		return levBreak;
+	}
+
+	public static void setLevBreak(int levBreak) {
+		PlayerInfo.levBreak = levBreak;
+	}
+
 	private JLabel levelIn;
 
 	public PlayerInfo(JFrame start) {
@@ -98,6 +107,46 @@ public class PlayerInfo extends JPanel{
 //		main.repaint();
 	}
 	
+	public JFrame getStart() {
+		return start;
+	}
+
+	public void setStart(JFrame start) {
+		this.start = start;
+	}
+
+	public JPanel getPinfo() {
+		return pinfo;
+	}
+
+	public void setPinfo(JPanel pinfo) {
+		this.pinfo = pinfo;
+	}
+
+	public JPanel getPlayerInfoIn() {
+		return playerInfoIn;
+	}
+
+	public void setPlayerInfoIn(JPanel playerInfoIn) {
+		this.playerInfoIn = playerInfoIn;
+	}
+
+	public static int getLev() {
+		return lev;
+	}
+
+	public static void setLev(int lev) {
+		PlayerInfo.lev = lev;
+	}
+
+	public JLabel getLevelIn() {
+		return levelIn;
+	}
+
+	public void setLevelIn(JLabel levelIn) {
+		this.levelIn = levelIn;
+	}
+
 	class Change implements ActionListener{
 
 
