@@ -59,11 +59,12 @@ public class PlusCoin extends JPanel{
 		btn5.setLocation(75,125);
 		btn5.setSize(50,30);
 
-		JButton btn6=new JButton("Yes"); 
+		JButton btn6=new JButton("no"); 
 		btn6.setLocation(200,125);
 		btn6.setSize(50,30);
 
 		exit.addActionListener(new Change());
+		btn5.addActionListener(new Change2());
 
 		plusIn.add(pluscoin);
 		plusIn.add(exit);
@@ -95,6 +96,15 @@ public class PlusCoin extends JPanel{
 			ChangePanel.ChangePanel(start, plus, new Main(start));			
 		}
 
+		
+	}
+	class Change2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			ChangePanel.ChangePanel(start, plus, new Card(start));
+			
+		}
 		
 	}
 
