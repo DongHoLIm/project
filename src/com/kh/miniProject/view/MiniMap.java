@@ -38,13 +38,14 @@ public class MiniMap extends JPanel {
 		// RandomPlaceManager rpm = new RandomPlaceManager(null);
 		this.start = start;
 		hmap = new HashMap();
-		main = this;
+		//main = this;
 		MiniMap = this;
-		MiniMap.setBounds(0, 0, 960, 720);
-		this.setBackground(Color.gray);
-
-		ImageIcon icon = new ImageIcon("E:/eclipse-workspace3/miniProject/miniMap.png");
+		this.setBounds(0, 0, 960, 720);
+		//this.setBackground(Color.gray);
 		this.setSize(960, 720);
+
+		JLabel icon1 = new JLabel(new ImageIcon("images/minimab.png"));
+	    icon1.setBounds(0, 0, 960, 720);
 
 		// 배경 Panel 생성후 컨텐츠페인으로 지정
 		// MiniMap = new JPanel() {
@@ -68,6 +69,7 @@ public class MiniMap extends JPanel {
 		place11.addActionListener(new ChangeMain());
 
 		this.add(place11);
+		this.add(icon1);
 
 	}
 
@@ -78,7 +80,7 @@ public class MiniMap extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			ChangePanel.ChangePanel(start, main, new Main(start));
+			ChangePanel.ChangePanel(start, MiniMap, new Main(start));
 		}
 
 	}
