@@ -18,6 +18,17 @@ public class PlayerInfo extends JPanel{
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
 	private static int lev = 1;
+
+	private static int levBreak = 0;
+	public static int getLevBreak() {
+		return levBreak;
+	}
+
+	public static void setLevBreak(int levBreak) {
+		PlayerInfo.levBreak = levBreak;
+	}
+
+
 	private JLabel levelIn;
 
 	public PlayerInfo(JFrame start) {
@@ -59,16 +70,16 @@ public class PlayerInfo extends JPanel{
 		JButton exit = new JButton("x");		
 		exit.setLocation(350,20);
 		exit.setSize(25,25);
-		JButton cloth = new JButton("¿Ê Àå");		
+		JButton cloth = new JButton("Â¿ÃŠ Ã€Ã¥");		
 		cloth.setLocation(310, 420);
 		cloth.setSize(70,30);
 		JLabel level = new JLabel("Level : ");
 		level.setLocation(180,180);
 		level.setSize(100,30);
-		JLabel charm = new JLabel("¸Å·Âµµ : ");
+		JLabel charm = new JLabel("Â¸Ã…Â·Ã‚ÂµÂµ : ");
 		charm.setLocation(100,130);
 		charm.setSize(50,20);
-		JLabel exper = new JLabel("°æÇèÄ¡ : ");
+		JLabel exper = new JLabel("Â°Ã¦Ã‡Ã¨Ã„Â¡ : ");
 		exper.setLocation(100,150);
 		exper.setSize(50,20);
 		String strlev = String.valueOf(lev).toString();
@@ -98,6 +109,46 @@ public class PlayerInfo extends JPanel{
 //		main.repaint();
 	}
 	
+	public JFrame getStart() {
+		return start;
+	}
+
+	public void setStart(JFrame start) {
+		this.start = start;
+	}
+
+	public JPanel getPinfo() {
+		return pinfo;
+	}
+
+	public void setPinfo(JPanel pinfo) {
+		this.pinfo = pinfo;
+	}
+
+	public JPanel getPlayerInfoIn() {
+		return playerInfoIn;
+	}
+
+	public void setPlayerInfoIn(JPanel playerInfoIn) {
+		this.playerInfoIn = playerInfoIn;
+	}
+
+	public static int getLev() {
+		return lev;
+	}
+
+	public static void setLev(int lev) {
+		PlayerInfo.lev = lev;
+	}
+
+	public JLabel getLevelIn() {
+		return levelIn;
+	}
+
+	public void setLevelIn(JLabel levelIn) {
+		this.levelIn = levelIn;
+	}
+
 	class Change implements ActionListener{
 
 
