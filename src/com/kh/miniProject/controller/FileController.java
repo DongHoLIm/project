@@ -2,13 +2,16 @@ package com.kh.miniProject.controller;
 
 import java.awt.Image;
 
+import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.dao.ImageOutput;
+import com.kh.miniProject.model.vo.GirlImageOut;
 
 public class FileController {
 	
-	public Image goRandomImageOutput() {
+	public String[] goGirlImages(int lev) {
 		
-		return null;
+		return new GirlImageOut().girlImageOut(lev, new GirlImages().girlImages(lev));
+		
 	}
 	
 	public Image goImageOutput(int i) {
@@ -25,5 +28,7 @@ public class FileController {
 		
 		return null;
 	}
+
+
 
 }
