@@ -14,11 +14,14 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import com.kh.miniProject.model.vo.PointMinus;
+
 public class Card extends JPanel{
 	
 	private JFrame start;
 	private JPanel card;
 	private JPanel cardIn;
+	public static int plusCoin;
 	
 
 	public Card(JFrame start) {
@@ -196,10 +199,20 @@ public class Card extends JPanel{
 		JButton btn1=new JButton("결제");
 		btn1.setLocation(100, 290);
 		btn1.setSize(70,30);
+		btn1.addActionListener(new goPlusCoin());
+			
 		
 		JButton btn2=new JButton("취소");
 		btn2.setLocation(220, 290);
 		btn2.setSize(70,30);
+		btn2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ChangePanel.ChangePanel(start, card, new PlusCoin(start));
+				
+			}
+		});
 
 		exit.addActionListener(new Change());
 
@@ -247,5 +260,21 @@ public class Card extends JPanel{
 
 
 	}
+
+	
+	class goPlusCoin implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			new PointMinus().pointPlus(plusCoin);
+			ChangePanel.ChangePanel(start, card, new Main(start));
+			
+		}
+		
+		
+		
+	}
+	
+	
 
 }

@@ -10,13 +10,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.kh.miniProject.view.CoinShop.Change;
-import com.kh.miniProject.view.CoinShop.Change2;
-
 public class CoinShop extends JPanel{
 	private JFrame start;
 	private JPanel coin;
 	private JPanel coinIn;
+	Card d = new Card(start);
 	
 	public CoinShop(JFrame start) {
 		this.start = start;
@@ -56,22 +54,59 @@ public class CoinShop extends JPanel{
 	    JButton exit=new JButton("x"); 
 	    exit.setLocation(450,25);
 	    exit.setSize(30,30);
-
+	    
+	    
 	    JButton btn1=new JButton("500"); 
 	    btn1.setLocation(50,280);
 	    btn1.setSize(75,30);
+	    btn1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int point1 =500;
+				Card.plusCoin = point1;
+								
+			}
+		});
 
 	    JButton btn2=new JButton("1000"); 
 	    btn2.setLocation(150,280);
 	    btn2.setSize(75,30);
+	    btn2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int point2 =1000;
+				Card.plusCoin =point2;
+				
+			}
+		});
 
 	    JButton btn3=new JButton("1500"); 
 	    btn3.setLocation(250,280);
 	    btn3.setSize(75,30);
+	    btn3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int point3 =1500;
+				Card.plusCoin = point3;
+				
+			}
+		});
 
 	    JButton btn4=new JButton("2000"); 
 	    btn4.setLocation(350,280);
 	    btn4.setSize(75,30);
+	    btn4.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int point4 = 2000;
+				Card.plusCoin =point4;
+				
+			}
+		});
 	    
 	    exit.addActionListener(new Change());
 	    btn1.addActionListener(new Change2());
