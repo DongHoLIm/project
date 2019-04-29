@@ -18,7 +18,7 @@ public class PlayerInfo extends JPanel{
 	private JFrame start;
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
-	private static int lev = 1;
+	public static int lev = 1;
 
 	private static int levBreak = 0;
 	public static int getLevBreak() {
@@ -71,16 +71,16 @@ public class PlayerInfo extends JPanel{
 		JButton exit = new JButton("x");		
 		exit.setLocation(350,20);
 		exit.setSize(25,25);
-		JButton cloth = new JButton("¿Ê Àå");		
+		JButton cloth = new JButton("쩔횎 �책");		
 		cloth.setLocation(310, 420);
 		cloth.setSize(70,30);
 		JLabel level = new JLabel("Level : ");
 		level.setLocation(180,180);
 		level.setSize(100,30);
-		JLabel charm = new JLabel("¸Å·Âµµ : ");
+		JLabel charm = new JLabel("쨍횇쨌횂쨉쨉 : ");
 		charm.setLocation(100,130);
 		charm.setSize(50,20);
-		JLabel exper = new JLabel("°æÇèÄ¡ : ");
+		JLabel exper = new JLabel("째챈횉챔횆징 : ");
 		exper.setLocation(100,150);
 		exper.setSize(50,20);
 		String strlev = String.valueOf(lev).toString();

@@ -31,8 +31,8 @@ public class MiniMap extends JPanel {
 	public static int[] girlImages = new int[5];
 	RandomPlace rp = new RandomPlace();
 	FileController fc = new FileController();
-	int levResult = PlayerInfo.getLev();
 	// ImageIcon background;
+	private JPanel place = new JPanel();
 
 	public MiniMap(JFrame start) {
 		// RandomPlaceManager rpm = new RandomPlaceManager(null);
@@ -371,12 +371,15 @@ public class MiniMap extends JPanel {
 	}
 
 	public Map CreatPlace2() {
-		JPanel place = new JPanel();
-		place.setBounds(750, 450, 200, 300);
+		place = new JPanel();
+		place.setBounds(800, 350, 150, 400);
 		place.setBorder(BorderFactory.createLineBorder(Color.black));
 		place.setLayout(null);
 		MiniMap.add(place);
 		MiniMap.repaint();
+		
+		plusGirlImage();
+	      
 		int y = 0;
 		for (int b = 0; b < temp.length; b++) {
 			System.out.println("호출됨 2");
@@ -606,6 +609,32 @@ public class MiniMap extends JPanel {
 			}
 		}
 		return hmap;
+	}
+	
+	public void plusGirlImage() {
+		
+		int levResult = PlayerInfo.lev;
+		System.out.println("레벨값 : " + levResult);
+		String[] mmgi = fc.goGirlImages(levResult);
+		System.out.println("배열길이 : " + mmgi.length);
+		System.out.println("무슨값 ? : " + mmgi[0]);
+		Image[] gImage = new Image[mmgi.length];
+		System.out.println("이미지 배열길이 : " + gImage.length);
+		JLabel[] gLabel = new JLabel[mmgi.length];
+		System.out.println("라벨 배열길이 : " + gLabel.length);
+		int sgoi = 10;
+		for(int g = 0 ; g < gImage.length ; g++) {
+			gImage[g] = new ImageIcon(mmgi[g]).getImage().getScaledInstance(50, 50, 0); 
+			System.out.println("무슨값이 들어갔을까? " + gImage[g]);
+			JLabel la = new JLabel();
+			la.setIcon(new ImageIcon(gImage[g]));
+			System.out.println("들어갔나? " + la);
+			la.setBounds(70 , sgoi , 50 , 50);
+			place.add(la);
+			sgoi +=50;
+
+			
+		}
 	}
 
 }
