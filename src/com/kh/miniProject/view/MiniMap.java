@@ -1,31 +1,37 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.miniProject.controller.FileController;
+import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.vo.RandomPlace;
-
 
 public class MiniMap extends JPanel {
 	private JFrame start;
 	private JPanel MiniMap;
 	private JPanel main;
-	private Map hmap;
+	public Map hmap;
+	GirlImages gi = new GirlImages();
 	public static int te[] = new int[5];
 	public static int temp[] = new int[5];
 	public static int temp2[] = new int[5];
 	public static int temp3[] = new int[5];
+	public static int[] girlImages = new int[5];
 	RandomPlace rp = new RandomPlace();
-
+	FileController fc = new FileController();
+	int levResult = PlayerInfo.getLev();
 	// ImageIcon background;
 
 	public MiniMap(JFrame start) {
@@ -53,7 +59,6 @@ public class MiniMap extends JPanel {
 
 		hmap.putAll(CreatPlace());
 		hmap.putAll(CreatPlace2());
-
 
 		JButton place11 = new JButton();
 		place11.setLocation(850, 50);
@@ -172,11 +177,13 @@ public class MiniMap extends JPanel {
 		JLabel placeName1 = new JLabel("영화관");
 		placeName1.setLocation(455, 260);
 		placeName1.setSize(150, 50);
+		JButton place1 = new JButton(new ImageIcon());
 
-		JButton place1 = new JButton();
 		place1.setLocation(450, 300);
 		place1.setSize(50, 50);
-
+		place1.setFocusPainted(false);
+		place1.setContentAreaFilled(false);
+		place1.setBorderPainted(false);
 		place1.addActionListener(new ChangeMovie());
 
 		this.add(place1);
@@ -322,22 +329,22 @@ public class MiniMap extends JPanel {
 			te[c] = rp.getRandom2()[c];
 
 		}
-		
+
 		for (int f = 0; f < temp.length; f++) {
 			if (Main.day == 0 && Main.dayBreak == 1 && Main.totalDay != 11) {
 				temp[f] += te[f];
 
 				System.out.println("호출됨");
-			} 
-//			else if (Main.day == 1 && Main.dayBreak == 4 && Main.totalDay != 11) {
-//				
-//				temp2[f] += te[f];
-//
-//			} else if (Main.day == 2 && Main.dayBreak == 7 && Main.totalDay != 11) {
-//				
-//				temp3[f] += te[f];
-//
-//			}
+			}
+			// else if (Main.day == 1 && Main.dayBreak == 4 && Main.totalDay != 11) {
+			//
+			// temp2[f] += te[f];
+			//
+			// } else if (Main.day == 2 && Main.dayBreak == 7 && Main.totalDay != 11) {
+			//
+			// temp3[f] += te[f];
+			//
+			// }
 
 		}
 		System.out.println("day" + Main.day);
@@ -359,88 +366,244 @@ public class MiniMap extends JPanel {
 			System.out.println("day4" + Main.day);
 			System.out.println("db4" + Main.dayBreak);
 		}
-		
 
 		return hmap;
 	}
+
 	public Map CreatPlace2() {
+		JPanel place = new JPanel();
+		place.setBounds(750, 450, 200, 300);
+		place.setBorder(BorderFactory.createLineBorder(Color.black));
+		place.setLayout(null);
+		MiniMap.add(place);
+		MiniMap.repaint();
+		int y = 0;
 		for (int b = 0; b < temp.length; b++) {
 			System.out.println("호출됨 2");
 			if (Main.dayBreak == 2 && Main.totalDay != 11) {
 				if (temp[b] == 1) {
 					hmap.putAll(Movie());
+					JLabel label = new JLabel("영화관");
+					label.setBounds(10, y, 50, 50);
+					place.add(label);
+					place.repaint();
+					y += 30;
 				} else if (temp[b] == 2) {
 					hmap.putAll(Cafe());
+					JLabel label2 = new JLabel("카페");
+					label2.setBounds(10, y, 50, 50);
+					place.add(label2);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 3) {
 					hmap.putAll(Park());
+					JLabel label3 = new JLabel("공원");
+					label3.setBounds(10, y, 50, 50);
+					place.add(label3);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 4) {
 					hmap.putAll(Beach());
+					JLabel label4 = new JLabel("바다");
+					label4.setBounds(10, y, 50, 50);
+					place.add(label4);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 5) {
 					hmap.putAll(Restaurant());
+					JLabel label5 = new JLabel("식당");
+					label5.setBounds(10, y, 50, 50);
+					place.add(label5);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 6) {
 					hmap.putAll(HotPlace());
+					JLabel label6 = new JLabel("번화가");
+					label6.setBounds(10, y, 50, 50);
+					place.add(label6);
+					place.repaint();
+					y += 50;
 				}
 
 				else if (temp[b] == 7) {
 					hmap.putAll(SiningRoom());
+					JLabel label7 = new JLabel("노래방");
+					label7.setBounds(10, y, 50, 50);
+					place.add(label7);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 8) {
 					hmap.putAll(Pub());
+					JLabel label8 = new JLabel("술집");
+					label8.setBounds(10, y, 50, 50);
+					place.add(label8);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 9) {
 					hmap.putAll(FlowerShop());
+					JLabel label9 = new JLabel("꽃집");
+					label9.setBounds(10, y, 50, 50);
+					place.add(label9);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 10) {
 					hmap.putAll(ThemePark());
+					JLabel label10 = new JLabel("놀이공원");
+					label10.setBounds(10, y, 50, 50);
+					place.add(label10);
+					place.repaint();
+					y += 50;
 				}
 
 			} else if (Main.dayBreak == 5 && Main.totalDay != 11) {
 				if (temp[b] == 1) {
 					hmap.putAll(Movie());
+					JLabel label = new JLabel("영화관");
+					label.setBounds(10, y, 50, 50);
+					place.add(label);
+					place.repaint();
+					y += 30;
 				} else if (temp[b] == 2) {
 					hmap.putAll(Cafe());
+					JLabel label2 = new JLabel("카페");
+					label2.setBounds(10, y, 50, 50);
+					place.add(label2);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 3) {
 					hmap.putAll(Park());
+					JLabel label3 = new JLabel("공원");
+					label3.setBounds(10, y, 50, 50);
+					place.add(label3);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 4) {
 					hmap.putAll(Beach());
+					JLabel label4 = new JLabel("바다");
+					label4.setBounds(10, y, 50, 50);
+					place.add(label4);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 5) {
 					hmap.putAll(Restaurant());
+					JLabel label5 = new JLabel("식당");
+					label5.setBounds(10, y, 50, 50);
+					place.add(label5);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 6) {
 					hmap.putAll(HotPlace());
+					JLabel label6 = new JLabel("번화가");
+					label6.setBounds(10, y, 50, 50);
+					place.add(label6);
+					place.repaint();
+					y += 50;
 				}
 
 				else if (temp[b] == 7) {
 					hmap.putAll(SiningRoom());
+					JLabel label7 = new JLabel("노래방");
+					label7.setBounds(10, y, 50, 50);
+					place.add(label7);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 8) {
 					hmap.putAll(Pub());
+					JLabel label8 = new JLabel("술집");
+					label8.setBounds(10, y, 50, 50);
+					place.add(label8);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 9) {
 					hmap.putAll(FlowerShop());
+					JLabel label9 = new JLabel("꽃집");
+					label9.setBounds(10, y, 50, 50);
+					place.add(label9);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 10) {
 					hmap.putAll(ThemePark());
+					JLabel label10 = new JLabel("놀이공원");
+					label10.setBounds(10, y, 50, 50);
+					place.add(label10);
+					place.repaint();
+					y += 50;
 				}
 			} else if (Main.dayBreak == 8 && Main.totalDay != 11) {
 				if (temp[b] == 1) {
 					hmap.putAll(Movie());
+					JLabel label = new JLabel("영화관");
+					label.setBounds(10, y, 50, 50);
+					place.add(label);
+					place.repaint();
+					y += 30;
 				} else if (temp[b] == 2) {
 					hmap.putAll(Cafe());
+					JLabel label2 = new JLabel("카페");
+					label2.setBounds(10, y, 50, 50);
+					place.add(label2);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 3) {
 					hmap.putAll(Park());
+					JLabel label3 = new JLabel("공원");
+					label3.setBounds(10, y, 50, 50);
+					place.add(label3);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 4) {
 					hmap.putAll(Beach());
+					JLabel label4 = new JLabel("바다");
+					label4.setBounds(10, y, 50, 50);
+					place.add(label4);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 5) {
 					hmap.putAll(Restaurant());
+					JLabel label5 = new JLabel("식당");
+					label5.setBounds(10, y, 50, 50);
+					place.add(label5);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 6) {
 					hmap.putAll(HotPlace());
+					JLabel label6 = new JLabel("번화가");
+					label6.setBounds(10, y, 50, 50);
+					place.add(label6);
+					place.repaint();
+					y += 50;
 				}
 
 				else if (temp[b] == 7) {
 					hmap.putAll(SiningRoom());
+					JLabel label7 = new JLabel("노래방");
+					label7.setBounds(10, y, 50, 50);
+					place.add(label7);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 8) {
 					hmap.putAll(Pub());
+					JLabel label8 = new JLabel("술집");
+					label8.setBounds(10, y, 50, 50);
+					place.add(label8);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 9) {
 					hmap.putAll(FlowerShop());
+					JLabel label9 = new JLabel("꽃집");
+					label9.setBounds(10, y, 50, 50);
+					place.add(label9);
+					place.repaint();
+					y += 50;
 				} else if (temp[b] == 10) {
 					hmap.putAll(ThemePark());
+					JLabel label10 = new JLabel("놀이공원");
+					label10.setBounds(10, y, 50, 50);
+					place.add(label10);
+					place.repaint();
+					y += 50;
 				}
 			}
-			
 		}
 		return hmap;
 	}

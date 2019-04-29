@@ -65,6 +65,32 @@ public class MyLovePercent extends JPanel{
 		label5.setLocation(10,300);
 		label5.setSize(50, 50);
 		
+		Image girl6 = new ImageIcon("images/girl6.png").getImage().getScaledInstance(50, 50, 0);
+		JLabel label6 = new JLabel(new ImageIcon(girl6));
+		label6.setLocation(150,60);
+		label6.setSize(50,50);
+		
+		Image girl7 = new ImageIcon("images/girl7.png").getImage().getScaledInstance(50, 50, 0);
+		JLabel label7 = new JLabel(new ImageIcon(girl7));
+		label7.setLocation(150,120);
+		label7.setSize(50,50);
+		
+		Image girl8 = new ImageIcon("images/girl8.png").getImage().getScaledInstance(50, 50, 0);
+		JLabel label8 = new JLabel(new ImageIcon(girl8));
+		label8.setLocation(150,180);
+		label8.setSize(50,50);
+		
+		Image girl9 = new ImageIcon("images/girl9.png").getImage().getScaledInstance(50, 50, 0);
+		JLabel label9 = new JLabel(new ImageIcon(girl9));
+		label9.setLocation(150,240);
+		label9.setSize(50,50);
+		
+		Image girl10 = new ImageIcon("images/girl10.png").getImage().getScaledInstance(50, 50, 0);
+		JLabel label10 = new JLabel(new ImageIcon(girl10));
+		label10.setLocation(150,300);
+		label10.setSize(50,50);
+		
+		
 		JButton info = new JButton("Info");
 		info.setLocation(50,50);
 		info.setSize(30,30);
@@ -90,6 +116,11 @@ public class MyLovePercent extends JPanel{
 		loveIn.add(label3);
 		loveIn.add(label4);
 		loveIn.add(label5);
+		loveIn.add(label6);
+		loveIn.add(label7);
+		loveIn.add(label8);
+		loveIn.add(label9);
+		loveIn.add(label10);		
 
 		this.add(loveIn);
 		this.add(info);
