@@ -11,6 +11,8 @@ import javax.swing.JTabbedPane;
 
 import com.kh.miniProject.model.vo.PointMinus;
 
+import com.kh.miniProject.model.vo.PointMinus;
+
 
 public class StoreMain extends JPanel {
 	private JFrame start;
@@ -788,8 +790,9 @@ public class StoreMain extends JPanel {
 				
 			}
 		});
+		String storeCoin=Integer.toString(PointMinus.resultcoin);
 		
-		JLabel coin = new JLabel("coin");
+		JLabel coin = new JLabel(storeCoin);
 		coin.setSize(240,30);
 		coin.setLocation(615, 100);
 		
