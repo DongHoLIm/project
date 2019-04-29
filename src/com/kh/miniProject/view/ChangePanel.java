@@ -27,4 +27,11 @@ public class ChangePanel {
 		a.repaint();
 	}
 
+	public static void ChangeStart(JFrame a, JPanel b, JFrame c) {
+
+		a.remove(b);
+		a.add(c);
+		a.repaint();
+
+	}
 }
