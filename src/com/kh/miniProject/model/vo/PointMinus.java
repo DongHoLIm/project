@@ -2,6 +2,7 @@ package com.kh.miniProject.model.vo;
 
 public class PointMinus {
 	public static int resultcoin =5000;
+
 	public void pointMinus(int minus) {
 		resultcoin = resultcoin-minus;		
 		
