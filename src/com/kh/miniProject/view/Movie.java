@@ -21,17 +21,15 @@ public class Movie extends JPanel {
 	private JFrame start;
 	
 	private JPanel movie;
-
+	private JLabel icon1;
 	public Movie(JFrame start) {
 		this.start = start;
 		movie = this;
 		this.setBounds(0, 0, 960, 720);
 		this.setLayout(null);
-//		JLabel MovieBack = new JLabel(
-//				new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
-//		MovieBack.setBounds(0, 0, 960, 720);
-		this.setBackground(Color.cyan);
-		System.out.println("패널 생성");
+		icon1 = new JLabel(new ImageIcon("images/CGV.jpg"));
+	    icon1.setBounds(0, 0, 960, 720);
+	
 		
 		movieInit();
 		
@@ -54,7 +52,7 @@ public class Movie extends JPanel {
 
 	}
 	public void movieInit() {
-		System.out.println("movie 내부 인터");
+		
 		movie.setVisible(true);
 		JButton exit = new JButton();
 		exit.setLocation(890, 20);
@@ -76,6 +74,7 @@ public class Movie extends JPanel {
 		movie.add(exit);
 		
 		
+		this.add(icon1);
 	}
 	class ChangeMain implements ActionListener{
 
