@@ -1,6 +1,7 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -8,6 +9,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -36,12 +38,14 @@ public class SingingRoom extends JPanel {
 	}
 
 	public void SingingRoomInit() {
+		Image icon = new ImageIcon("images/back.png").getImage().getScaledInstance(25, 25, 0);
 		System.out.println("singingRoom 내부 인터");
 		singingRoom.setVisible(true);
-		JButton exit = new JButton();
+		JButton exit = new JButton(new ImageIcon(icon));
 		exit.setLocation(850, 50);
 		exit.setSize(30, 30);
-		exit.setText("x");
+		exit.setContentAreaFilled(false);
+		exit.setFocusPainted(false);
 		exit.addActionListener(new ChangeMain());
 
 		singingRoom.add(exit);
