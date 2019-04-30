@@ -444,6 +444,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						ap.test(9);
 						pm.pointMinus(900);
 						
 					}
@@ -490,6 +491,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						ap.test(10);
 						pm.pointMinus(1000);
 					}
 				});
@@ -535,6 +537,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						ap.test(11);
 						pm.pointMinus(1100);
 						
 					}
@@ -581,6 +584,7 @@ public class StoreMain extends JPanel {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						ChangePanel.ChangePanel(start, check,shopmain );
+						ap.test(12);
 						pm.pointMinus(1200);
 						
 					}
