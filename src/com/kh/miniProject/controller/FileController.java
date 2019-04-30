@@ -1,9 +1,11 @@
 package com.kh.miniProject.controller;
 
 import java.awt.Image;
+import java.io.File;
 
 import com.kh.miniProject.model.dao.GirlImages;
 import com.kh.miniProject.model.dao.ImageOutput;
+import com.kh.miniProject.model.dao.TextOutput;
 import com.kh.miniProject.model.vo.GirlImageOut;
 
 public class FileController {
@@ -24,9 +26,9 @@ public class FileController {
 		return null;
 	}
 	
-	public String goTextOutput() {
+	public File textOutgoTput(String place) {
 		
-		return null;
+		return new TextOutput().textOutput(place);
 	}
 
 

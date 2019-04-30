@@ -18,9 +18,9 @@ public class PlayerInfo extends JPanel{
 	private JFrame start;
 	private JPanel pinfo;
 	private JPanel playerInfoIn;
-	public static int lev = 1;
+	public static int lev = 5;
 
-	private static int levBreak = 0;
+	private static int levBreak = 4;
 	public static int getLevBreak() {
 		return levBreak;
 	}

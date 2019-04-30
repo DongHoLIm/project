@@ -90,6 +90,7 @@ public class MiniMap extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			ChangePanel.ChangePanel(start, MiniMap, new Movie(start));
+			
 		}
 
 	}
