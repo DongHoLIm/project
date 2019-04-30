@@ -790,11 +790,7 @@ public class StoreMain extends JPanel {
 				
 			}
 		});
-		String storeCoin=Integer.toString(PointMinus.resultcoin);
 		
-		JLabel coin = new JLabel(storeCoin);
-		coin.setSize(240,30);
-		coin.setLocation(615, 100);
 		
 		JButton exit = new JButton("exit");
 		
@@ -817,7 +813,7 @@ public class StoreMain extends JPanel {
 		tp.add("악세사리",jewerlyItems);
 		tp.add("아이템",item);
 		
-		this.add(coin);
+		
 		this.add(tp);
 		this.add(exit);
 		
