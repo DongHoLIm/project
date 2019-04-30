@@ -60,11 +60,12 @@ public class MiniMap extends JPanel {
 
 		hmap.putAll(CreatPlace());
 		hmap.putAll(CreatPlace2());
-
-		JButton place11 = new JButton();
-		place11.setLocation(850, 50);
+		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
+		JButton place11 = new JButton(new ImageIcon(img6));
+		place11.setLocation(890, 20);
 		place11.setSize(30, 30);
-		place11.setText("x");
+		place11.setContentAreaFilled(false);
+		place11.setFocusPainted(false);
 
 		place11.addActionListener(new ChangeMain());
 

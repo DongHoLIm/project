@@ -1,10 +1,12 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,34 +29,55 @@ public class CoinShop extends JPanel{
 		
 		coinIn=new JPanel();
 		coinIn.setLayout(null);
-		coinIn.setLocation(400, 80);
+		coinIn.setLocation(400, 150);
 		coinIn.setSize(500,400);
 		coinIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
 		
-		JButton info = new JButton("Info");
+		Image img = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
+		Image img2 = new ImageIcon("images/inventory.png").getImage().getScaledInstance(80, 80, 0);
+		Image img3 = new ImageIcon("images/heart.png").getImage().getScaledInstance(60, 60, 0);
+		Image img4 = new ImageIcon("images/coin.png").getImage().getScaledInstance(60, 60, 0);
+		Image img5 = new ImageIcon("images/map.png").getImage().getScaledInstance(80, 80, 0);
+		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
+		
+		
+		JButton info = new JButton((new ImageIcon(img2)));
 		info.setLocation(50,50);
-		info.setSize(30,30);
-		JButton shop = new JButton("shop");
-		shop.setLocation(50,90);
-		shop.setSize(30,30);
-		JButton aff = new JButton("aff");
-		aff.setLocation(50,130);
-		aff.setSize(30,30);
-		JButton coin = new JButton("coin");
+		info.setSize(70,70);
+		JButton shop = new JButton(new ImageIcon(img));
+		shop.setLocation(50,130);
+		shop.setSize(70,70);
+		JButton aff = new JButton(new ImageIcon(img3));
+		aff.setLocation(50,210);
+		aff.setSize(70,70);
+		JButton coin = new JButton(new ImageIcon(img4));
 		coin.setLocation(600,50);
-		coin.setSize(30,30);
-		JButton map = new JButton("map");
+		coin.setSize(70,70);
+		JButton map = new JButton(new ImageIcon(img5));
 		map.setLocation(850,50);
-		map.setSize(30,30);
+		map.setSize(70,70);
+		
+		info.setContentAreaFilled(false);
+		info.setFocusPainted(false);
+		shop.setContentAreaFilled(false);
+		shop.setFocusPainted(false);
+		aff.setContentAreaFilled(false);
+		aff.setFocusPainted(false);
+		coin.setContentAreaFilled(false);
+		coin.setFocusPainted(false);
+		map.setContentAreaFilled(false);
+		map.setFocusPainted(false);
 		
 	    JLabel coinShop= new JLabel("\ncoinShop");
 	    coinShop.setLocation(210,50);
 	    coinShop.setSize(120,50);
 
-	    JButton exit=new JButton("x"); 
+	    JButton exit=new JButton(new ImageIcon(img6)); 
 	    exit.setLocation(450,25);
 	    exit.setSize(30,30);
 	    
+	    exit.setContentAreaFilled(false);
+		exit.setFocusPainted(false);
 	    
 	    JButton btn1=new JButton("500"); 
 	    btn1.setLocation(50,280);
