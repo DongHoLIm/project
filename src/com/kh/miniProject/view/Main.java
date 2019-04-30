@@ -49,27 +49,33 @@ public class Main extends JPanel{
 		case 5 : startMent = "\n\n 아 여자친구 사귀고 싶다~"; break;
 			
 		}
+		Image img = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
+		Image img2 = new ImageIcon("images/inventory.png").getImage().getScaledInstance(80, 80, 0);
+		Image img3 = new ImageIcon("images/heart.png").getImage().getScaledInstance(60, 60, 0);
+		Image img4 = new ImageIcon("images/coin.png").getImage().getScaledInstance(60, 60, 0);
+		Image img5 = new ImageIcon("images/map.png").getImage().getScaledInstance(80, 80, 0);
+		
 		
 		JLabel label = new JLabel();
 		label.setIcon(new ImageIcon(icon));
 		label.setLocation(250,210);
 		label.setSize(200,300);
-		JButton info = new JButton("Info");
+		JButton info = new JButton((new ImageIcon(img2)));
 		info.setLocation(50,50);
-		info.setSize(30,30);
-		JButton shop = new JButton("shop");
-		shop.setLocation(50,90);
-		shop.setSize(30,30);
+		info.setSize(70,70);
+		JButton shop = new JButton(new ImageIcon(img));
+		shop.setLocation(50,130);
+		shop.setSize(70,70);
 		shop.addActionListener(new Change5()); 
-		JButton aff = new JButton("aff");
-		aff.setLocation(50,130);
-		aff.setSize(30,30);
-		JButton coin = new JButton("coin");
+		JButton aff = new JButton(new ImageIcon(img3));
+		aff.setLocation(50,210);
+		aff.setSize(70,70);
+		JButton coin = new JButton(new ImageIcon(img4));
 		coin.setLocation(600,50);
-		coin.setSize(30,30);
-		JButton map = new JButton("map");
+		coin.setSize(70,70);
+		JButton map = new JButton(new ImageIcon(img5));
 		map.setLocation(850,50);
-		map.setSize(30,30);
+		map.setSize(70,70);
 		map.addActionListener(new Change6()); 
 		JTextArea textArea = new JTextArea(10,30);
 		textArea.setLocation(200,300);
@@ -86,7 +92,7 @@ public class Main extends JPanel{
 		textlabel2.setText(totalDay + "일차");
 		JLabel textLabel2 = new JLabel();
 		coinstr = Integer.valueOf(PointMinus.resultcoin).toString();
-		textLabel2.setLocation(650,40);
+		textLabel2.setLocation(680,40);
 		textLabel2.setSize(100,50);
 		if(!coinstr.equals(0)) {
 			textLabel2.setText(coinstr);			
@@ -94,6 +100,16 @@ public class Main extends JPanel{
 			textLabel2.setText("0");	
 		}
 		
+		info.setContentAreaFilled(false);
+		info.setFocusPainted(false);
+		shop.setContentAreaFilled(false);
+		shop.setFocusPainted(false);
+		aff.setContentAreaFilled(false);
+		aff.setFocusPainted(false);
+		coin.setContentAreaFilled(false);
+		coin.setFocusPainted(false);
+		map.setContentAreaFilled(false);
+		map.setFocusPainted(false);
 	
 		Calendar c = Calendar.getInstance();
 		int year = c.get(Calendar.YEAR);

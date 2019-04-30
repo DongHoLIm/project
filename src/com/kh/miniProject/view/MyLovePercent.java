@@ -23,7 +23,7 @@ public class MyLovePercent extends JPanel{
 		this.love = this;
 		
 		loveIn = new JPanel();
-		loveIn.setLocation(100,50);
+		loveIn.setLocation(150,50);
 		loveIn.setSize(400,500);
 		loveIn.setLayout(null);
 		loveIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
@@ -31,14 +31,16 @@ public class MyLovePercent extends JPanel{
 		this.setLocation(0,0);
 		this.setSize(960,720);
 		this.setLayout(null);
-
+		Image img6 = new ImageIcon("images/back.png").getImage().getScaledInstance(30, 30, 0);
 		JLabel label0 = new JLabel("나의 애정도 입니다!!");
 		label0.setSize(300,50);
 		label0.setLocation(10,10);
 
-		JButton exit = new JButton("x"); 
+		JButton exit = new JButton(new ImageIcon(img6)); 
 		exit.setLocation(350,20);
 		exit.setSize(30,30);
+		exit.setContentAreaFilled(false);
+		exit.setFocusPainted(false);
 
 		Image girl1 = new ImageIcon("images/girl1.png").getImage().getScaledInstance(50, 50, 0);
 		JLabel label1 = new JLabel(new ImageIcon(girl1));
@@ -90,22 +92,39 @@ public class MyLovePercent extends JPanel{
 		label10.setLocation(150,300);
 		label10.setSize(50,50);
 		
+		Image img = new ImageIcon("images/store.png").getImage().getScaledInstance(60, 60, 0);
+		Image img2 = new ImageIcon("images/inventory.png").getImage().getScaledInstance(80, 80, 0);
+		Image img3 = new ImageIcon("images/heart.png").getImage().getScaledInstance(60, 60, 0);
+		Image img4 = new ImageIcon("images/coin.png").getImage().getScaledInstance(60, 60, 0);
+		Image img5 = new ImageIcon("images/map.png").getImage().getScaledInstance(80, 80, 0);
 		
-		JButton info = new JButton("Info");
+		
+		JButton info = new JButton((new ImageIcon(img2)));
 		info.setLocation(50,50);
-		info.setSize(30,30);
-		JButton shop = new JButton("shop");
-		shop.setLocation(50,90);
-		shop.setSize(30,30);
-		JButton aff = new JButton("aff");
-		aff.setLocation(50,130);
-		aff.setSize(30,30);
-		JButton coin = new JButton("coin");
+		info.setSize(70,70);
+		JButton shop = new JButton(new ImageIcon(img));
+		shop.setLocation(50,130);
+		shop.setSize(70,70);
+		JButton aff = new JButton(new ImageIcon(img3));
+		aff.setLocation(50,210);
+		aff.setSize(70,70);
+		JButton coin = new JButton(new ImageIcon(img4));
 		coin.setLocation(600,50);
-		coin.setSize(30,30);
-		JButton map = new JButton("map");
+		coin.setSize(70,70);
+		JButton map = new JButton(new ImageIcon(img5));
 		map.setLocation(850,50);
-		map.setSize(30,30);
+		map.setSize(70,70);
+		
+		info.setContentAreaFilled(false);
+		info.setFocusPainted(false);
+		shop.setContentAreaFilled(false);
+		shop.setFocusPainted(false);
+		aff.setContentAreaFilled(false);
+		aff.setFocusPainted(false);
+		coin.setContentAreaFilled(false);
+		coin.setFocusPainted(false);
+		map.setContentAreaFilled(false);
+		map.setFocusPainted(false);
 		
 		exit.addActionListener(new Change());
 		
