@@ -179,11 +179,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName1 = new JLabel("영화관");
 		placeName1.setLocation(455, 260);
 		placeName1.setSize(150, 50);
-		JButton place1 = new JButton(new ImageIcon());
+		JButton place1 = new JButton(new ImageIcon("images/Button(1).png"));
 
 		place1.setLocation(450, 300);
 		place1.setSize(50, 50);
-		place1.setFocusPainted(false);
+		
+		place1.setFocusPainted(true);
 		place1.setContentAreaFilled(false);
 		place1.setBorderPainted(false);
 		place1.addActionListener(new ChangeMovie());
@@ -199,10 +200,12 @@ public class MiniMap extends JPanel {
 		placeName2.setLocation(130, 160);
 		placeName2.setSize(150, 50);
 
-		JButton place2 = new JButton();
+		JButton place2 = new JButton(new ImageIcon("images/Button(1).png"));
 		place2.setLocation(120, 200);
 		place2.setSize(50, 50);
-
+		place2.setFocusPainted(true);
+		place2.setContentAreaFilled(false);
+		place2.setBorderPainted(false);
 		place2.addActionListener(new ChangeCafe());
 
 		this.add(place2);
@@ -215,10 +218,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName3 = new JLabel("공원");
 		placeName3.setLocation(260, 110);
 		placeName3.setSize(150, 50);
-		JButton place3 = new JButton();
+		JButton place3 = new JButton(new ImageIcon("images/Button(1).png"));
 		place3.setLocation(250, 150);
 		place3.setSize(50, 50);
-
+		place3.setFocusPainted(true);
+		place3.setContentAreaFilled(false);
+		place3.setBorderPainted(false);
 		place3.addActionListener(new ChangePark());
 		this.add(place3);
 		this.add(placeName3);
@@ -230,10 +235,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName4 = new JLabel("바닷가");
 		placeName4.setLocation(275, 460);
 		placeName4.setSize(150, 50);
-		JButton place4 = new JButton();
+		JButton place4 = new JButton(new ImageIcon("images/Button(1).png"));
 		place4.setLocation(270, 500);
 		place4.setSize(50, 50);
-
+		place4.setFocusPainted(true);
+		place4.setContentAreaFilled(false);
+		place4.setBorderPainted(false);
 		place4.addActionListener(new ChangeBeach());
 		this.add(place4);
 		this.add(placeName4);
@@ -245,10 +252,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName5 = new JLabel("식당");
 		placeName5.setLocation(660, 160);
 		placeName5.setSize(150, 50);
-		JButton place5 = new JButton();
+		JButton place5 = new JButton(new ImageIcon("images/Button(1).png"));
 		place5.setLocation(650, 200);
 		place5.setSize(50, 50);
-
+		place5.setFocusPainted(true);
+		place5.setContentAreaFilled(false);
+		place5.setBorderPainted(false);
 		place5.addActionListener(new ChangeRestaurant());
 		this.add(place5);
 		this.add(placeName5);
@@ -260,9 +269,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName6 = new JLabel("번화가");
 		placeName6.setLocation(455, 500);
 		placeName6.setSize(150, 50);
-		JButton place6 = new JButton();
+		JButton place6 = new JButton(new ImageIcon("images/Button(1).png"));
 		place6.setLocation(450, 540);
 		place6.setSize(50, 50);
+		place6.setFocusPainted(true);
+		place6.setContentAreaFilled(false);
+		place6.setBorderPainted(false);
 		place6.addActionListener(new ChangeHotPlace());
 		this.add(place6);
 		this.add(placeName6);
@@ -273,9 +285,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName7 = new JLabel("노래방");
 		placeName7.setLocation(55, 240);
 		placeName7.setSize(150, 50);
-		JButton place7 = new JButton();
+		JButton place7 = new JButton(new ImageIcon("images/Button(1).png"));
 		place7.setLocation(50, 280);
 		place7.setSize(50, 50);
+		place7.setFocusPainted(true);
+		place7.setContentAreaFilled(false);
+		place7.setBorderPainted(false);
 		place7.addActionListener(new ChangeSiningRoom());
 		this.add(place7);
 		this.add(placeName7);
@@ -286,9 +301,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName8 = new JLabel("술집");
 		placeName8.setLocation(560, 10);
 		placeName8.setSize(150, 50);
-		JButton place8 = new JButton();
+		JButton place8 = new JButton(new ImageIcon("images/Button(1).png"));
 		place8.setLocation(550, 50);
 		place8.setSize(50, 50);
+		place8.setFocusPainted(true);
+		place8.setContentAreaFilled(false);
+		place8.setBorderPainted(false);
 		place8.addActionListener(new ChangePub());
 		this.add(place8);
 		this.add(placeName8);
@@ -300,9 +318,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName9 = new JLabel("꽃집");
 		placeName9.setLocation(610, 430);
 		placeName9.setSize(150, 50);
-		JButton place9 = new JButton();
+		JButton place9 = new JButton(new ImageIcon("images/Button(1).png"));
 		place9.setLocation(600, 470);
 		place9.setSize(50, 50);
+		place9.setFocusPainted(true);
+		place9.setContentAreaFilled(false);
+		place9.setBorderPainted(false);
 		place9.addActionListener(new ChangeFlowerShop());
 		this.add(place9);
 		this.add(placeName9);
@@ -316,9 +337,12 @@ public class MiniMap extends JPanel {
 		JLabel placeName10 = new JLabel("놀이공원");
 		placeName10.setLocation(190, 280);
 		placeName10.setSize(150, 50);
-		JButton place10 = new JButton();
+		JButton place10 = new JButton(new ImageIcon("images/Button(1).png"));
 		place10.setLocation(190, 320);
 		place10.setSize(50, 50);
+		place10.setFocusPainted(true);
+		place10.setContentAreaFilled(false);
+		place10.setBorderPainted(false);
 		place10.addActionListener(new ChangeThemePark());
 		this.add(place10);
 		this.add(placeName10);

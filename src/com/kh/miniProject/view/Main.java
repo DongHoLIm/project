@@ -1,6 +1,7 @@
 
 package com.kh.miniProject.view;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +13,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 
 import com.kh.miniProject.model.vo.PointMinus;
 
@@ -54,7 +57,7 @@ public class Main extends JPanel{
 		
 		JLabel label = new JLabel();
 		label.setIcon(new ImageIcon(icon));
-		label.setLocation(250,210);
+		label.setLocation(350,310);
 		label.setSize(200,300);
 		JButton info = new JButton("Info");
 		info.setLocation(50,50);
@@ -74,10 +77,17 @@ public class Main extends JPanel{
 		map.setSize(30,30);
 		map.addActionListener(new Change6()); 
 		JTextArea textArea = new JTextArea(10,30);
-		textArea.setLocation(200,300);
-		textArea.setSize(300,100);
+		textArea.setLocation(200,500);
+		textArea.setSize(500,100);
 		textArea.setText(startMent);
 		textArea.setEditable(false);
+		
+		TitledBorder oneTb = new TitledBorder(new LineBorder(Color.BLUE), "경현");
+		oneTb.setTitleColor(Color.BLACK);
+		textArea.setBorder(oneTb);
+		textArea.setCaretColor(Color.cyan);
+		textArea.setFont(getFont().deriveFont(15.0f));
+		
 		JLabel textlabel = new JLabel();
 		textlabel.setText(str);
 		textlabel.setLocation(350,20);
