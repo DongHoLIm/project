@@ -2,6 +2,7 @@ package com.kh.miniProject.view;
 
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -54,12 +55,14 @@ public class Movie extends JPanel {
 
 	}
 	public void movieInit() {
+		Image icon = new ImageIcon("images/back.png").getImage().getScaledInstance(25, 25, 0);
 		System.out.println("movie 내부 인터");
 		movie.setVisible(true);
-		JButton exit = new JButton();
+		JButton exit = new JButton(new ImageIcon(icon));
 		exit.setLocation(890, 20);
 		exit.setSize(30, 30);
-		exit.setText("x");
+		exit.setContentAreaFilled(false);
+		exit.setFocusPainted(false);
 		exit.addActionListener(new ChangeMain());
 //		exit.addMouseListener(new MouseAdapter() {
 //			@Override

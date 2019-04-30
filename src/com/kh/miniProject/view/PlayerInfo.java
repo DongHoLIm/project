@@ -20,7 +20,7 @@ public class PlayerInfo extends JPanel{
 	private JPanel playerInfoIn;
 	public static int lev = 1;
 
-	private static int levBreak = 0;
+	private static int levBreak = 5;
 	public static int getLevBreak() {
 		return levBreak;
 	}

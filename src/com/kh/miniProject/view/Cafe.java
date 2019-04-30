@@ -1,9 +1,11 @@
 package com.kh.miniProject.view;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -35,12 +37,14 @@ public class Cafe extends JPanel {
 	}
 
 	public void cafeInit() {
+		Image icon = new ImageIcon("images/back.png").getImage().getScaledInstance(25, 25, 0);
 		System.out.println("cafe 내부 인터");
 		cafe.setVisible(true);
-		JButton exit = new JButton();
+		JButton exit = new JButton(new ImageIcon(icon));
 		exit.setLocation(850, 50);
 		exit.setSize(30, 30);
-		exit.setText("x");
+		exit.setContentAreaFilled(false);
+		exit.setFocusPainted(false);
 		exit.addActionListener(new ChangeMain());
 
 		cafe.add(exit);
