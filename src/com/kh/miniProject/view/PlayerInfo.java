@@ -39,7 +39,8 @@ public class PlayerInfo extends JPanel{
 		this.setLocation(0,0);
 		this.setSize(960,720);
 		this.setLayout(null);
-		
+		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	    icon1.setBounds(0, 0, 960, 720);
 		playerInfoIn = new JPanel();
 		playerInfoIn.setLayout(null);
 		playerInfoIn.setLocation(100, 50);
@@ -104,7 +105,7 @@ public class PlayerInfo extends JPanel{
 		this.add(shop);
 		this.add(aff);
 		this.add(playerInfoIn);
-		
+		this.add(icon1);
 		
 //		main.add(this);
 //		main.repaint();

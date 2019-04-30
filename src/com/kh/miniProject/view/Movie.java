@@ -30,7 +30,18 @@ public class Movie extends JPanel {
 //		JLabel MovieBack = new JLabel(
 //				new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		MovieBack.setBounds(0, 0, 960, 720);
-		this.setBackground(Color.cyan);
+		if(Main.day == 0) {JLabel icon1 = new JLabel(new ImageIcon("images/movie.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    this.add(icon1);
+		}else if(Main.day == 1) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/movie2.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}else if(Main.day == 2) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/movie3.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}
 		System.out.println("패널 생성");
 		
 		movieInit();

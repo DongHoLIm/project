@@ -4,8 +4,10 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.kh.miniProject.model.vo.Day;
@@ -24,11 +26,21 @@ public class Cafe extends JPanel {
 //		JLabel cafeBack = new JLabel(
 //				new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		cafeBack.setBounds(0, 0, 960, 720);
-		this.setBackground(Color.ORANGE);
-		System.out.println("패널 생성");
+		if(Main.day == 0) {JLabel icon1 = new JLabel(new ImageIcon("images/cafe2.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    this.add(icon1);
+		}else if(Main.day == 1) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/cafe3.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}else if(Main.day == 2) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/cafe4.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}
+	    System.out.println("패널 생성");
 		
 		cafeInit();
-		
 		
 
 

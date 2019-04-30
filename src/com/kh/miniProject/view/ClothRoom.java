@@ -5,8 +5,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
@@ -24,6 +26,9 @@ public class ClothRoom extends JPanel{
 			this.setSize(960,720);
 			this.setLayout(null);	
 			
+			JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    
 			colthroomIn = new JPanel();
 			colthroomIn.setLayout(null);
 			colthroomIn.setLocation(100, 50);
@@ -126,7 +131,7 @@ public class ClothRoom extends JPanel{
 		    colthroomIn.add(cloth);
 			
 			this.add(colthroomIn);
-			
+			this.add(icon1);
 			
 		}
 		

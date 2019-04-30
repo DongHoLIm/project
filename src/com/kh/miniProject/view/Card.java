@@ -7,6 +7,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -33,6 +34,9 @@ public class Card extends JPanel{
 		this.setLayout(null);
 		this.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 
+		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    
 		cardIn=new JPanel();
 		cardIn.setLayout(null);
 		cardIn.setLocation(400, 80);
@@ -244,7 +248,7 @@ public class Card extends JPanel{
 		this.add(shop);
 		this.add(aff);
 		this.add(cardIn);
-
+		this.add(icon1);
 
 
 

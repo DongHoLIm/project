@@ -4,8 +4,10 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.kh.miniProject.model.vo.Day;
@@ -26,7 +28,18 @@ public class Beach extends JPanel {
 //		JLabel BeachBack = new JLabel(
 //				new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
 //		BeachBack.setBounds(0, 0, 960, 720);
-		this.setBackground(Color.yellow);
+		if(Main.day == 0) {JLabel icon1 = new JLabel(new ImageIcon("images/beach.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    this.add(icon1);
+		}else if(Main.day == 1) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/beach_twilight.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}else if(Main.day == 2) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/beach_night.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}
 		System.out.println("패널 생성");
 		
 		BeachInit();
@@ -40,12 +53,15 @@ public class Beach extends JPanel {
 		System.out.println("Beach 내부 인터");
 		beach.setVisible(true);
 		JButton exit = new JButton();
+		
 		exit.setLocation(850, 50);
 		exit.setSize(30, 30);
 		exit.setText("x");
 		exit.addActionListener(new ChangeMain());
-
+		
+		
 		beach.add(exit);
+		beach.repaint();
 
 	}
 

@@ -36,7 +36,9 @@ public class Main extends JPanel{
 		this.setLayout(null);
 
 		Image icon = new ImageIcon("images/people.png").getImage().getScaledInstance(200, 300, 0);;
-
+		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    
 		
 		String startMent = null;
 		int mentRan = (int)(Math.random()*5)+1;
@@ -125,7 +127,7 @@ public class Main extends JPanel{
 		this.add(shop);
 		this.add(aff);
 		this.add(coin);
-		
+		this.add(icon1);
 		//start.add(this);
 		
 //		Main main = this;

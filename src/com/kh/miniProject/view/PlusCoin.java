@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,7 +31,9 @@ public class PlusCoin extends JPanel{
 		plusIn.setLocation(400,180);
 		plusIn.setSize(300,200);
 		plusIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
-		
+		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	   
 		JButton info = new JButton("Info");
 		info.setLocation(50,50);
 		info.setSize(30,30);
@@ -77,6 +80,7 @@ public class PlusCoin extends JPanel{
 		this.add(shop);
 		this.add(aff);
 	    this.add(plusIn);
+	    this.add(icon1);
 	}
 	
 //	class Delete implements ActionListener{

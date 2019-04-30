@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -28,7 +29,18 @@ public class SingingRoom extends JPanel {
 //			JLabel singingRoomBack = new JLabel(
 //					new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			singingRoomBack.setBounds(0, 0, 960, 720);
-		this.setBackground(Color.magenta);
+		if(Main.day == 0) {JLabel icon1 = new JLabel(new ImageIcon("images/sing1.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    this.add(icon1);
+		}else if(Main.day == 1) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/sing2.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}else if(Main.day == 2) {
+			JLabel icon1 = new JLabel(new ImageIcon("images/sing3.png"));
+		    icon1.setBounds(0, 0, 960, 720);
+		    this.add(icon1);
+		}
 		System.out.println("패널 생성");
 
 		SingingRoomInit();

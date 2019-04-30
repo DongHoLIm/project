@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,6 +26,9 @@ public class CoinShop extends JPanel{
 		this.setSize(960,720);
 		this.setLayout(null);
 		
+		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    
 		coinIn=new JPanel();
 		coinIn.setLayout(null);
 		coinIn.setLocation(400, 80);
@@ -128,6 +132,7 @@ public class CoinShop extends JPanel{
 		this.add(shop);
 		this.add(aff);
 	    this.add(coinIn);
+	    this.add(icon1);
 	    
 //	    main.add(this);
 //	    main.repaint();

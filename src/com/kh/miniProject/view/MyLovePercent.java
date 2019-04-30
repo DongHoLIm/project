@@ -27,7 +27,8 @@ public class MyLovePercent extends JPanel{
 		loveIn.setSize(400,500);
 		loveIn.setLayout(null);
 		loveIn.setBorder(BorderFactory.createLineBorder(Color.PINK, 1));
-
+		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	    icon1.setBounds(0, 0, 960, 720);
 		this.setLocation(0,0);
 		this.setSize(960,720);
 		this.setLayout(null);
@@ -128,7 +129,7 @@ public class MyLovePercent extends JPanel{
 		this.add(aff);
 		this.add(coin);
 		this.add(map);
-		
+		this.add(icon1);
 		
 
 	}

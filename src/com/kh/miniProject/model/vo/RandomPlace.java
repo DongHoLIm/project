@@ -36,6 +36,7 @@ public class RandomPlace {
 			random2 = new int [randomNum];
 			System.out.println("lev1 - 2"); 
 			for(int r = 0; r < random2.length; r++) {
+				
 				MiniMap.te[r] = 0;
 			}
 

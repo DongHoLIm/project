@@ -4,8 +4,10 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.kh.miniProject.model.vo.Day;
@@ -23,7 +25,9 @@ public class Credit  extends JPanel {
 //			JLabel EndingBack = new JLabel(
 //					new ImageIcon(new ImageIcon("images/영화관.PNG").getImage().getScaledInstance(960, 720, 0)));
 //			EndingBack.setBounds(0, 0, 960, 720);
-		this.setBackground(Color.ORANGE);
+		JLabel icon1 = new JLabel(new ImageIcon("images/roomIn.png"));
+	    icon1.setBounds(0, 0, 960, 720);
+	    this.add(icon1);
 		System.out.println("크레딧 이동");
 
 		CreditInit();
@@ -45,10 +49,8 @@ public class Credit  extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Main.day = 0;
-			Main.day2 = 0;
-			Main.dayBreak = 0;
-			Main.totalDay = 1;
+
+
 			ChangePanel.ChangeStart(start, credit, new Start());
 		}
 
